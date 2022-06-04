@@ -25,6 +25,7 @@ For example, if you want the top 100 albums of all time in RYM's website, you ca
 
 ``` py
 from selenium.webdriver import Edge
+from rym_webcrawler import RymCharts
 
 driver = Edge(executable_path="./webdrivers/msedgedriver.exe")
 chart_url = "https://rateyourmusic.com/charts/top/album/all-time/deweight:live,archival,soundtrack/"
