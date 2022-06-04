@@ -17,7 +17,7 @@ class RymCharts:
             "position": [],
             "artist": [],
             "album": [],
-            "released_date": [],
+            "release_date": [],
             "primary_genres": [],
             "secondary_genres": [],
             "descriptors": [],
