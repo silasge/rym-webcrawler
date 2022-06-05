@@ -9,7 +9,7 @@ class RymCharts:
         self.driver = driver
         
         
-    def top_charts(self, n):
+    def top_charts(self, n, print_log=False):
         page = 1
         pos_id = 0
         
@@ -37,7 +37,7 @@ class RymCharts:
                 self.chart_dict["position"].append(pos_id)
                 self.chart_dict["artist"].append(utils.get_artist(p))
                 self.chart_dict["album"].append(utils.get_album(p))
-                self.chart_dict["released_date"].append(utils.get_release_date(p))
+                self.chart_dict["release_date"].append(utils.get_release_date(p))
                 self.chart_dict["primary_genres"].append(utils.get_primary_genres(p))
                 self.chart_dict["secondary_genres"].append(utils.get_secondary_genres(p))
                 self.chart_dict["descriptors"].append(utils.get_descriptors(p))
@@ -45,6 +45,7 @@ class RymCharts:
                 self.chart_dict["number_reviews"].append(utils.get_ratings(p)[1])
                 self.chart_dict["avg_rating"].append(utils.get_ratings(p)[2])
                 self.chart_dict["id_spotify"].append(utils.get_spotify_id(p))
+                if print_log is True: print(f"Position {pos_id} finished")
             page += 1
             
         return self
