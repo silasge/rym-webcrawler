@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rym-webcrawler"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Silas Genário <sg.lopes26@gmail.com>"]
 
